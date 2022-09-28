@@ -9,8 +9,11 @@ namespace ContosEMS.Data.Entities
 {
     public class Notification
     {
+        [Key]
+        public int Id { get; set; }
+
         [ForeignKey("Technician")]
-        public int TechnicianId { get; set; }
+        public int TechnicianEmail { get; set; }
 
         [ForeignKey("Equipment")]
         public int EquipmentId { get; set; }
@@ -21,7 +24,8 @@ namespace ContosEMS.Data.Entities
 
         public string Comments { get; set; }
 
-        [Key]
         public DateTime Timestamp { get; set; }
+
+        public string Status { get; set; }
     }
 }

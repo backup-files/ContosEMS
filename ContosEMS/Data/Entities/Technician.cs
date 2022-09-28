@@ -9,8 +9,6 @@ namespace ContosEMS.Data.Entities
     public class Technician
     {
         [Key]
-        public int Id { get; set; }
-
         public string Email { get; set; }
 
         public string HashedPassword { get; set; }

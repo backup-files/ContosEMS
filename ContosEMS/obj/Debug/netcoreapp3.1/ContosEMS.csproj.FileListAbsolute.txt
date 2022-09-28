@@ -34,9 +34,6 @@ C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Micros
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
@@ -86,3 +83,14 @@ C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\obj\Debug\netcoreapp3.1\Contos
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\obj\Debug\netcoreapp3.1\ContosEMS.dll
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\obj\Debug\netcoreapp3.1\ContosEMS.pdb
 C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\obj\Debug\netcoreapp3.1\ContosEMS.genruntimeconfig.cache
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tezz-io\source\repos\ContosEMS\ContosEMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

@@ -35,12 +35,13 @@ namespace ContosEMS.Data
         {
             context.Notifications.Add(new Notification
             {
-                TechnicianId = 1,
+                TechnicianEmail = 1,
                 EquipmentId = 1,
                 Title = "AA",
                 Severity = 1,
                 Comments = "BB",
-                Timestamp = DateTime.Now
+                Timestamp = DateTime.Now,
+                Status = "active"
             });
         }
 
