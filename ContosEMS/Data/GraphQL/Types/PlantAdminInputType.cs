@@ -10,7 +10,7 @@ namespace ContosEMS.Data.GraphQL.Types
     {
         public PlantAdminInputType()
         {
-            Name = "PlantInputInput";
+            base.Field<NonNullGraphType<StringGraphType>>("Name");
             base.Field<NonNullGraphType<StringGraphType>>("Email");
             base.Field<NonNullGraphType<StringGraphType>>("HashedPassword");
         }

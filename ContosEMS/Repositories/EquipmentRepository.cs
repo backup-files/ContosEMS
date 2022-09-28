@@ -40,10 +40,10 @@ namespace ContosEMS.Repositories
             return this._context.Equipments.Where(eq => eq.Manufacturer.Equals(manufacturer));
         }
 
-        public IEnumerable<Equipment> GetEquipmentsDueThisMonth()
-        {
-            return this._context.Equipments.Where(eq => (eq.ServiceDueDate.Month == DateTime.Now.Month && eq.ServiceDueDate.Year == DateTime.Now.Year));
-        }
+        //public IEnumerable<Equipment> GetEquipmentsDueThisMonth()
+        //{
+        //    return this._context.Equipments.Where(eq => (eq.ServiceDueDa == DateTime.Now.Month && eq.ServiceDueDate.Year == DateTime.Now.Year));
+        //}
 
         public string AddEquipment(Equipment equipment)
         {

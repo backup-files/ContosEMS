@@ -91,7 +91,6 @@ namespace ContosEMS.Data.GraphQL
                 }
             );
 
-
             base.Field<StringGraphType>(
                 "registerTechnician",
                 arguments: new QueryArguments(
@@ -104,7 +103,6 @@ namespace ContosEMS.Data.GraphQL
                 }
             );
 
-
             base.Field<StringGraphType>(
                 "registerPlantAdmin",
                 arguments: new QueryArguments(
@@ -114,6 +112,30 @@ namespace ContosEMS.Data.GraphQL
                 {
                     var plantAdmin = context.GetArgument<PlantAdmin>("plantAdmin");
                     return plantAdminRepository.RegisterPlantAdmin(plantAdmin);
+                }
+            );
+
+            base.Field<StringGraphType>(
+                "logoutTechnician",
+                arguments: new QueryArguments(
+                    new QueryArgument<NonNullGraphType<TechnicianInputType>> { Name = "technician" }
+                ),
+                resolve: context =>
+                {
+                    var technician = context.GetArgument<Technician>("technician");
+                    return technicianRepository.LogoutTechnician(technician);
+                }
+            );
+
+            base.Field<StringGraphType>(
+                "logoutPlantAdmin",
+                arguments: new QueryArguments(
+                    new QueryArgument<NonNullGraphType<PlantAdminInputType>> { Name = "plantAdmin" }
+                ),
+                resolve: context =>
+                {
+                    var plantAdmin = context.GetArgument<PlantAdmin>("plantAdmin");
+                    return plantAdminRepository.LogoutPlantAdmin(plantAdmin);
                 }
             );
         }

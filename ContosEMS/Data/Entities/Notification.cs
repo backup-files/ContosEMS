@@ -13,7 +13,7 @@ namespace ContosEMS.Data.Entities
         public int Id { get; set; }
 
         [ForeignKey("Technician")]
-        public int TechnicianEmail { get; set; }
+        public string TechnicianEmail { get; set; }
 
         [ForeignKey("Equipment")]
         public int EquipmentId { get; set; }
@@ -24,7 +24,7 @@ namespace ContosEMS.Data.Entities
 
         public string Comments { get; set; }
 
-        public DateTime Timestamp { get; set; }
+        public String Timestamp { get; set; }
 
         public string Status { get; set; }
     }

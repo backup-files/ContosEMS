@@ -15,14 +15,14 @@ namespace ContosEMS.Repositories
             this._context = context;
         }
 
-        public bool CanPlantAdminRegister(PlantAdmin technician)
+        public bool CanPlantAdminRegister(PlantAdmin plantAdmin)
         {
-            return (this._context.PlantAdmins.First(t => t.Email == technician.Email) == null);
+            return !this._context.PlantAdmins.Any(t => t.Email == plantAdmin.Email);
         }
 
-        public bool DoesPlantAdminExists(PlantAdmin technician)
+        public bool DoesPlantAdminExists(PlantAdmin plantAdmin)
         {
-            return !this.CanPlantAdminRegister(technician);
+            return !this.CanPlantAdminRegister(plantAdmin);
         }
 
         public string RegisterPlantAdmin(PlantAdmin plantAdmin)
@@ -55,6 +55,12 @@ namespace ContosEMS.Repositories
         public PlantAdmin GetPlantAdminByEmail(string email)
         {
             return this._context.PlantAdmins.First(t => t.Email.Equals(email));
+        }
+
+        public string LogoutPlantAdmin(PlantAdmin plantAdmin)
+        {
+            UserManager.LogoutPlantAdmin(plantAdmin.Email);
+            return "Logged out successfully.";
         }
     }
 }

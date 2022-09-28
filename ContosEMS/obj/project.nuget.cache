@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7Dq9chEKSuCxrXjWosdViBw4/2Zq5PDfyvVMMpyclmbnq0qLsHysF9bbJHVWJmqAGW9keIh8Kdd4vOL5zSWxng==",
+  "dgSpecHash": "hCDBesmL1Q6avZXk0kkv2lA5tCZKj92wFc7qwC9+DLV67gccNl/3Vkk615Vl+W4+8yy0U/FstOa+NMg2RMOdNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\tezz-io\\source\\repos\\ContosEMS\\ContosEMS\\ContosEMS.csproj",
   "expectedPackageFiles": [
@@ -49,8 +49,10 @@
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.28\\microsoft.entityframeworkcore.3.1.28.nupkg.sha512",
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.28\\microsoft.entityframeworkcore.abstractions.3.1.28.nupkg.sha512",
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.28\\microsoft.entityframeworkcore.analyzers.3.1.28.nupkg.sha512",
+    "C:\\Users\\tejas\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.3\\microsoft.entityframeworkcore.design.3.1.3.nupkg.sha512",
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.28\\microsoft.entityframeworkcore.relational.3.1.28.nupkg.sha512",
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.28\\microsoft.entityframeworkcore.sqlserver.3.1.28.nupkg.sha512",
+    "C:\\Users\\tejas\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.3\\microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512",
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.28\\microsoft.extensions.caching.abstractions.3.1.28.nupkg.sha512",
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.28\\microsoft.extensions.caching.memory.3.1.28.nupkg.sha512",
     "C:\\Users\\tejas\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.2.0\\microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",

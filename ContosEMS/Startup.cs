@@ -34,6 +34,8 @@ namespace ContosEMS
         public void ConfigureServices(IServiceCollection services)
         {
             DbInterception.Add(new CreateDatabaseCollationInterceptor("Latin1_General_CS_AS"));
+
+            services.AddControllers();
             services.AddDbContext<EMSDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:EMS"]);
@@ -56,11 +58,30 @@ namespace ContosEMS
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, EMSDbContext context)
-        { 
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, EMSDbContext context)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseGraphQL<EMSSchema>();
             app.UseGraphQLPlayground();
             context.Seed();
+            UserManager.AddUsers(context);
         }
     }
 }

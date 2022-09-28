@@ -14,16 +14,12 @@ namespace ContosEMS.Data.Entities
         [StringLength(50)]
         public string Name { get; set; }
         
-        [StringLength(250)]
+        [StringLength(1000)]
         public string Description { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime InstalledDate { get; set; }
+        public String InstalledDate { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime ServiceDueDate { get; set; }
+        public String ServiceDueDate { get; set; }
 
         [StringLength(50)]
         public string Manufacturer { get; set; }

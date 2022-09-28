@@ -42,37 +42,38 @@ namespace ContosEMS.Data.GraphQL
                 }
             );
 
-            base.Field<EquipmentType>(
+            base.Field<ListGraphType<EquipmentType>>(
                 "equipmentsByManufacturer",
                 arguments: new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "manufacturer" }),
                 resolve: context =>
                 {
                     var manufacturer = context.GetArgument<string>("manufacturer");
+                    Console.WriteLine(manufacturer);
                     return equipmentRepository.GetEquipmentByManufacturer(manufacturer);
                 }
             );
 
-            base.Field<EquipmentType>(
-                "equipmentsDueThisMonth",
-                resolve: context =>
-                {
-                    return equipmentRepository.GetEquipmentsDueThisMonth();
-                }
-            );
+            //base.Field<NotificationType>(
+            //    "equipmentsDueThisMonth",
+            //    resolve: context =>
+            //    {
+            //        return equipmentRepository.GetEquipmentsDueThisMonth();
+            //    }
+            //);
 
-            base.Field<ListGraphType<EquipmentType>>("allNotifications", resolve: context => {
+            base.Field<ListGraphType<NotificationType>>("allNotifications", resolve: context => {
                 return notificationRepository.AllNotifications();
             });
 
-            base.Field<ListGraphType<EquipmentType>>("allActiveNotifications", resolve: context => {
+            base.Field<ListGraphType<NotificationType>>("allActiveNotifications", resolve: context => {
                 return notificationRepository.AllActiveNotifications();
             });
             
-            base.Field<ListGraphType<EquipmentType>>("allDismissedNotifications", resolve: context => {
+            base.Field<ListGraphType<NotificationType>>("allDismissedNotifications", resolve: context => {
                 return notificationRepository.AllDismissedNotifications();
             });
 
-            base.Field<ListGraphType<EquipmentType>>("allCompletedNotifications", resolve: context => {
+            base.Field<ListGraphType<NotificationType>>("allCompletedNotifications", resolve: context => {
                 return notificationRepository.AllCompletedNotifications();
             });
 
@@ -110,6 +111,23 @@ namespace ContosEMS.Data.GraphQL
                 }
             );
 
+            base.Field<StringGraphType>("isTechnicianLoggedIn",
+                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "email" }),
+                resolve: context =>
+                {
+                    var email = context.GetArgument<string>("email");
+                    return UserManager.IsLoggedIn[email];
+                }
+            );
+
+            base.Field<StringGraphType>("isPlantAdminLoggedIn",
+                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "email" }),
+                resolve: context =>
+                {
+                    var email = context.GetArgument<string>("email");
+                    return UserManager.IsAdminLoggedIn[email];
+                }
+            );
         }
     }
 }

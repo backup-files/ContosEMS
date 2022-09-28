@@ -46,6 +46,7 @@ namespace ContosEMS.Repositories
             }
             if(this._context.Technicians.Any(t => t.HashedPassword.Equals(technician.HashedPassword)))
             {
+                UserManager.LoginTechnician(technician.Email);
                 return "Logged in Technician successfully";
             }
             else
@@ -57,6 +58,12 @@ namespace ContosEMS.Repositories
         public Technician GetTechnicianByEmail(string email)
         {
             return this._context.Technicians.First(t => t.Email.Equals(email));
+        }
+
+        public string LogoutTechnician(Technician technician)
+        {
+            UserManager.LogoutTechnician(technician.Email);
+            return "Logged out successfully.";
         }
     }
 }
