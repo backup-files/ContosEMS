@@ -77,22 +77,6 @@ namespace ContosEMS.Data.GraphQL
                 return notificationRepository.AllCompletedNotifications();
             });
 
-            base.Field<StringGraphType>("loginTechnician", 
-                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<TechnicianInputType>> { Name = "technician" }),
-                resolve: context => {
-                    var technician = context.GetArgument<Technician>("technician");
-                    return technicianRepository.LoginTechnician(technician);
-                }
-            );
-
-            base.Field<StringGraphType>("loginPlantAdmin",
-                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<PlantAdminInputType>> { Name = "plantAdmin" }),
-                resolve: context => {
-                    var plantAdmin = context.GetArgument<PlantAdmin>("plantAdmin");
-                    return plantAdminRepository.LoginPlantAdmin(plantAdmin);
-                }
-            );
-
             base.Field<TechnicianType>("getTechnicianByEmail",
                 arguments: new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "email" }),
                 resolve: context =>

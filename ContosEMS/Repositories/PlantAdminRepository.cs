@@ -57,9 +57,9 @@ namespace ContosEMS.Repositories
             return this._context.PlantAdmins.First(t => t.Email.Equals(email));
         }
 
-        public string LogoutPlantAdmin(PlantAdmin plantAdmin)
+        public string LogoutPlantAdmin(string email)
         {
-            UserManager.LogoutPlantAdmin(plantAdmin.Email);
+            UserManager.LogoutPlantAdmin(email);
             return "Logged out successfully.";
         }
     }

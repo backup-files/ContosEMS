@@ -35,6 +35,8 @@ namespace ContosEMS.Repositories
             {
                 return "Error: Technician already Registered.";
             }
+            this._context.Technicians.Add(technician);
+            this._context.SaveChanges();
             return "Registered Technician successfully";
         }
 
@@ -60,9 +62,9 @@ namespace ContosEMS.Repositories
             return this._context.Technicians.First(t => t.Email.Equals(email));
         }
 
-        public string LogoutTechnician(Technician technician)
+        public string LogoutTechnician(string email)
         {
-            UserManager.LogoutTechnician(technician.Email);
+            UserManager.LogoutTechnician(email);
             return "Logged out successfully.";
         }
     }

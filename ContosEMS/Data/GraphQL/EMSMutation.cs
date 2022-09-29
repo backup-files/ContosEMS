@@ -115,27 +115,43 @@ namespace ContosEMS.Data.GraphQL
                 }
             );
 
+            base.Field<StringGraphType>("loginTechnician",
+                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<TechnicianInputType>> { Name = "technician" }),
+                resolve: context => {
+                    var technician = context.GetArgument<Technician>("technician");
+                    return technicianRepository.LoginTechnician(technician);
+                }
+            );
+
+            base.Field<StringGraphType>("loginPlantAdmin",
+                arguments: new QueryArguments(new QueryArgument<NonNullGraphType<PlantAdminInputType>> { Name = "plantAdmin" }),
+                resolve: context => {
+                    var plantAdmin = context.GetArgument<PlantAdmin>("plantAdmin");
+                    return plantAdminRepository.LoginPlantAdmin(plantAdmin);
+                }
+            );
+
             base.Field<StringGraphType>(
                 "logoutTechnician",
                 arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<TechnicianInputType>> { Name = "technician" }
+                    new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "email" }
                 ),
                 resolve: context =>
                 {
-                    var technician = context.GetArgument<Technician>("technician");
-                    return technicianRepository.LogoutTechnician(technician);
+                    var email = context.GetArgument<string>("email");
+                    return technicianRepository.LogoutTechnician(email);
                 }
             );
 
             base.Field<StringGraphType>(
                 "logoutPlantAdmin",
                 arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<PlantAdminInputType>> { Name = "plantAdmin" }
+                    new QueryArgument<NonNullGraphType<StringGraphType>> { Name = "email" }
                 ),
                 resolve: context =>
                 {
-                    var plantAdmin = context.GetArgument<PlantAdmin>("plantAdmin");
-                    return plantAdminRepository.LogoutPlantAdmin(plantAdmin);
+                    var email = context.GetArgument<string>("email");
+                    return plantAdminRepository.LogoutPlantAdmin(email);
                 }
             );
         }
